@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<title>list_teachers</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>first_name</th>
+			<th>last_name</th>
+			<th>registration number</th>
+			<th>profession</th>
+
+          {% for teacher in teachers %}	
+        <tr>
+          <td>{{teacher.first_name}}</td>
+          <td>{{teacher.last_name}}</td>
+          <td>{{teacher.registration_number}}</td>
+          <td>{{teacher.profession}}</td>
+         
+         
+      </tr>
+       {% endfor %}
+
+
+	</table>
+  <style>
+  body{
+    margin:0 auto;
+    background-color:white;
+    padding:200px 200px 200px 200px;
+    
+    display:table;
+  }
+  table{
+    border:1px solid #aaa;
+    border-collapse: collapse;
+  }
+
+  table tr{
+    border-bottom: 1px solid #333;
+  }
+
+  table tr td{
+    padding: 10px;
+    border-right: 1px solid #333;
+
+  }
+
+  th{
+    border-right: 1px solid #333;
+    text-align: center;
+  
+  }
+</style>
+</body>
+</html>
